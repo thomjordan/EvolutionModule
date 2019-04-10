@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3201411B200DF6BA00F0BD60 /* EvolutionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 32014119200DF6BA00F0BD60 /* EvolutionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32014128200DF7E200F0BD60 /* Genome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32014127200DF7E200F0BD60 /* Genome.swift */; };
+		321F4EC6201CF18000D4BC2D /* Resident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321F4EC5201CF18000D4BC2D /* Resident.swift */; };
+		32DF6734224FF4CD00164797 /* EvoParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF6733224FF4CD00164797 /* EvoParams.swift */; };
+		32E75ABD2023804000D43FAD /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E75ABC2023804000D43FAD /* Fitness.swift */; };
+		32F3B3A82016A4410045E452 /* EvolutionEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B3A72016A4410045E452 /* EvolutionEnvironment.swift */; };
+		32F3B3AE2016B0050045E452 /* Population.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3B3AD2016B0050045E452 /* Population.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32014116200DF6BA00F0BD60 /* EvolutionModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EvolutionModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32014119200DF6BA00F0BD60 /* EvolutionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvolutionModule.h; sourceTree = "<group>"; };
 		3201411A200DF6BA00F0BD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32014127200DF7E200F0BD60 /* Genome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genome.swift; sourceTree = "<group>"; };
+		321F4EC5201CF18000D4BC2D /* Resident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resident.swift; sourceTree = "<group>"; };
+		32DF6733224FF4CD00164797 /* EvoParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvoParams.swift; sourceTree = "<group>"; };
+		32E75ABC2023804000D43FAD /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
+		32F3B3A72016A4410045E452 /* EvolutionEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionEnvironment.swift; sourceTree = "<group>"; };
+		32F3B3AD2016B0050045E452 /* Population.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Population.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +58,14 @@
 		32014118200DF6BA00F0BD60 /* EvolutionModule */ = {
 			isa = PBXGroup;
 			children = (
-				32014119200DF6BA00F0BD60 /* EvolutionModule.h */,
+				32DF6733224FF4CD00164797 /* EvoParams.swift */,
+				32F3B3AD2016B0050045E452 /* Population.swift */,
+				32F3B3A72016A4410045E452 /* EvolutionEnvironment.swift */,
+				321F4EC5201CF18000D4BC2D /* Resident.swift */,
+				32014127200DF7E200F0BD60 /* Genome.swift */,
+				32E75ABC2023804000D43FAD /* Fitness.swift */,
 				3201411A200DF6BA00F0BD60 /* Info.plist */,
+				32014119200DF6BA00F0BD60 /* EvolutionModule.h */,
 			);
 			path = EvolutionModule;
 			sourceTree = "<group>";
@@ -95,6 +113,7 @@
 				TargetAttributes = {
 					32014115200DF6BA00F0BD60 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321F4EC6201CF18000D4BC2D /* Resident.swift in Sources */,
+				32F3B3AE2016B0050045E452 /* Population.swift in Sources */,
+				32F3B3A82016A4410045E452 /* EvolutionEnvironment.swift in Sources */,
+				32E75ABD2023804000D43FAD /* Fitness.swift in Sources */,
+				32DF6734224FF4CD00164797 /* EvoParams.swift in Sources */,
+				32014128200DF7E200F0BD60 /* Genome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +277,7 @@
 		3201411F200DF6BA00F0BD60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -267,6 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rationum.com.EvolutionModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -274,6 +301,7 @@
 		32014120200DF6BA00F0BD60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
